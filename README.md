@@ -1,9 +1,9 @@
-#🎲 Dice Roller App
+# 🎲 Dice Roller App
 
 A sleek, responsive dice-rolling web app built with HTML, CSS, and JavaScript.
 Users can roll multiple dice at once and enjoy smooth animations and a clean, dark-themed UI with a light mode option.
 
-#✨ Features
+# ✨ Features
 
 🎲 Roll one or multiple dice instantly
 
