@@ -17,7 +17,7 @@ Users can roll multiple dice at once and enjoy smooth animations and a clean, da
 
 ⚡ Fast, lightweight, and fun to use
 
-🧠 Technologies Used
+# 🧠 Technologies Used
 
 HTML5 — structure
 
@@ -25,18 +25,18 @@ CSS3 — animations, responsiveness, and theme styling
 
 JavaScript (ES6) — logic and interactivity
 
-🚀 How to Run
+# 🚀 How to Run
 
 Clone the repository
 
-git clone https://github.com/yourusername/dice-roller-app.git
+git clone https://github.com/SamuelChiazalam/dice-roller-app.git
 
 
 Open the project folder and run index.html in your browser.
 
 Select how many dice you want to roll, then click "Roll Dice".
 
-🧩 Future Enhancements
+# 🧩 Future Enhancements
 
 Add sound effects for dice rolls
 
