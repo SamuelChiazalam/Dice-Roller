@@ -37,6 +37,7 @@ Open the project folder and run index.html in your browser.
 Select how many dice you want to roll, then click "Roll Dice".
 
 # 🧩 Future Enhancements
+I might 🌚:
 
 Add sound effects for dice rolls
 
