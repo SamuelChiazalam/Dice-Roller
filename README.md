@@ -29,7 +29,7 @@ JavaScript (ES6) — logic and interactivity
 
 Clone the repository
 
-git clone https://github.com/SamuelChiazalam/dice-roller-app.git
+git clone https://github.com/SamuelChiazalam/Dice-Roller.git
 
 
 Open the project folder and run index.html in your browser.
