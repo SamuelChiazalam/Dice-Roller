@@ -12,7 +12,7 @@
 // ---------------------------------------------------------
 function rollDice() {
 
-  // --- STEP 1: Collect required HTML elements ---
+  // --- Collect required HTML elements ---
   const numOfDiceInput = document.getElementById("numOfDice");
   const diceResult = document.getElementById("diceResult");
   const diceImages = document.getElementById("diceImages");
@@ -24,7 +24,7 @@ function rollDice() {
   const values = [];
   const images = [];
 
-  // --- STEP 2: Validate user input ---
+  // --- Validate user input ---
   if (isNaN(numOfDice)) {
     displayMessage(diceResult, "⚠️ Please enter a valid number.", "error");
     diceImages.innerHTML = "";
@@ -43,14 +43,14 @@ function rollDice() {
     return;
   }
 
-  // --- STEP 3: Clear previous results before rolling ---
+  // --- Clear previous results before rolling ---
   diceResult.textContent = "Rolling dice... 🎲";
   diceImages.innerHTML = "";
 
-  // Optional: brief delay to simulate rolling
+  // Brief delay to simulate rolling
   setTimeout(() => {
 
-    // --- STEP 4: Perform dice rolls ---
+    // --- Perform dice rolls ---
     for (let i = 0; i < numOfDice; i++) {
 
       // Generate a random number between 1 and 6
@@ -66,14 +66,14 @@ function rollDice() {
       images.push(imageTag);
     }
 
-    // --- STEP 5: Display results ---
+    // --- Display results ---
     diceResult.textContent = `🎯 Dice rolled: ${values.join(", ")}`;
     diceImages.innerHTML = images.join("");
 
-    // --- STEP 6: Show stats (sum, average, highest, lowest) ---
+    // --- Show stats (sum, average, highest, lowest) ---
     displayStatistics(values, diceImages);
 
-    // --- STEP 7: Save last roll data in local storage ---
+    // --- Save last roll data in local storage ---
     saveLastRoll(values);
 
   }, 300); // short delay for effect
