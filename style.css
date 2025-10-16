@@ -1,0 +1,176 @@
+:root {
+  /* 🎨 Theme Colors */
+  --bg-dark: #0d0d0d;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+  --container-bg: rgba(30, 30, 30, 0.85);
+  --text-light: #f5f5f5;
+  --accent: #ffcc33;
+  --button-gradient: linear-gradient(135deg, #d97706, #b45309);
+  --button-hover: linear-gradient(135deg, #b45309, #92400e);
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background:
+    linear-gradient(135deg, var(--bg-overlay), var(--bg-dark)),
+    url("background.jpg") center/cover no-repeat;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+#container {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--container-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px var(--shadow);
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 204, 51, 0.3);
+}
+
+#themeToggle {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--button-gradient);
+  color: var(--text-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#themeToggle:hover {
+  transform: scale(1.05);
+  background: var(--button-hover);
+}
+
+label {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+input {
+  width: 80px;
+  padding: 8px;
+  margin-left: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-light);
+  outline: none;
+}
+
+button {
+  margin-top: 15px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--button-gradient);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+button:hover {
+  transform: scale(1.05);
+  background: var(--button-hover);
+}
+
+#diceResult {
+  margin: 20px 0;
+  font-size: 1.3rem;
+}
+
+#diceImages img {
+  width: clamp(60px, 25vw, 100px);
+  margin: 5px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* 🎲 Shake Animation */
+.rolling {
+  animation: shake 0.7s ease;
+}
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  50% { transform: rotate(-8deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* ✨ Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* 🌤️ Light Mode */
+body.light-mode {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(245, 245, 245, 0.9)),
+    url("background.jpg") center/cover no-repeat;
+  color: #111;
+}
+body.light-mode #container {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+body.light-mode h1 {
+  color: #d97706;
+  text-shadow: none;
+}
+body.light-mode input {
+  border-color: #d97706;
+  color: #111;
+}
+body.light-mode button,
+body.light-mode #themeToggle {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111;
+}
+body.light-mode button:hover,
+body.light-mode #themeToggle:hover {
+  background: linear-gradient(135deg, #f59e0b, #b45309);
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 480px) {
+  #container {
+    padding: 20px;
+  }
+
+  button, input {
+    font-size: 1rem;
+  }
+
+  #diceImages img {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
